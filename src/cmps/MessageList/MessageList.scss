@@ -1,0 +1,11 @@
+@import "../../scss/setup/functions";
+@import "../../scss/setup/typography";
+
+.message-list {
+  overflow-y: scroll;
+  padding: 0 20px!important;
+
+  > *:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}

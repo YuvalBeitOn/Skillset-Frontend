@@ -1,0 +1,113 @@
+@import "../../scss/setup/functions";
+@import "../../scss/setup/typography";
+@import "../../scss/basics/animations";
+
+.message-preview {
+  position: relative;
+  min-width: 300px;
+  max-width: 100%;
+  height: 90px;
+
+  .message-img {
+    width: 65px;
+    border-radius: 5px;
+    margin-right: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    height: 100%;
+
+    .msg-content {
+      font-size: rem(14px);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .msg-time {
+    font-size: rem(12px);
+    position: absolute;
+    top: 5px;
+    right: 0;
+    color: #808080cf;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+  }
+}
+
+.message-modal {
+  position: absolute;
+  animation: fadein 0.4s;
+  z-index: 1;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  min-width: 600px;
+  max-width: 700px;
+  min-height: 150px;
+  max-height: 400px;
+  background: #fff;
+  background-image: linear-gradient(48deg, #fff 0%, #2196f33b 100%);
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: -20px 20px 35px 1px rgb(10 49 86 / 18%);
+  padding: 30px;
+  margin-bottom: 0 !important;
+
+  .message-preview {
+    height: unset;
+    margin-top: 10px;
+    .message-img {
+      width: 85px;
+      margin-right: 15px;
+      align-self: flex-start;
+      &:hover {
+        cursor: unset;
+      }
+    }
+
+    .content {
+      min-height: 80px;
+      width: 100%;
+      .msg-email {
+        font-size: rem(20px);
+        margin-bottom: 5px;
+      }
+      .msg-content {
+        line-height: 25px;
+        font-size: rem(17px);
+        max-height: 250px;
+        overflow-y: scroll;
+        white-space: unset;
+        display: unset;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        padding-right: 20px;
+      }
+    }
+
+    .msg-time {
+      font-size: rem(13px);
+    }
+  }
+
+  .cls-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    &:hover {
+      color: white;
+    }
+  }
+}

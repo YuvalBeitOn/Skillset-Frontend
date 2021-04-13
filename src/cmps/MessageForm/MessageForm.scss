@@ -1,0 +1,81 @@
+@import "../../scss/setup/functions";
+@import "../../scss/setup/typography";
+@import "../../scss/basics/animations";
+
+.message-form-container {
+  margin-bottom: 30px;
+  .message-form {
+    width: 550px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(211, 211, 211, 0.349);
+    .email-input,
+    .content-box {
+      width: 100%;
+      resize: none;
+      margin-bottom: 15px;
+      padding: 10px 8px;
+      outline: none;
+      border: 2px solid rgb(223, 223, 223);
+      border-radius: 5px;
+      &::placeholder {
+        font-family: Quicksand-Reg;
+        font-size: rem(16px);
+      }
+    }
+
+  }
+  .submit-btn, .cls-btn {
+    font-family: "Quicksand-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    font-size: rem(15px);
+    width: 90px;
+    height: 40px;
+    padding: 10px 8px;
+    background-color: rgb(70, 169, 221);
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(70, 169, 221);
+    letter-spacing: 0.6px;
+    transition: all ease-in-out 0.2s;
+    &:hover {
+      background-color: rgb(255, 255, 255);
+      color: unset;
+      border: 2px solid rgb(22, 22, 22);
+    }
+  }
+
+  .reject-modal {
+    position: absolute;
+    animation: fadein 0.4s;
+    font-family: "Quicksand-Bold";
+    z-index: 1;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 100px;
+    background-color: white;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
+    p {
+      margin-bottom: 15px;
+      color: #333333;
+      font-size: rem(18px);
+    }
+
+    .cls-btn {
+      align-self: center;
+      font-size: rem(14px);
+      width: 50px;
+      height: 30px;
+     
+    }
+  }
+}

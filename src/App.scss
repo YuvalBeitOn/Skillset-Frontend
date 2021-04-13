@@ -1,0 +1,21 @@
+.App {
+  height: fit-content;
+  max-height: 90%;
+  margin: 40px 0;
+  border: 2px solid rgb(223, 223, 223);
+  width: 550px;
+  border-radius: 5px;
+
+  .filter-input {
+    width: 400px;
+    padding: 10px 12px;
+    margin-bottom: 35px;
+    outline: none;
+    border: 2px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    &::placeholder {
+      font-family: Quicksand-Reg;
+      font-size: 16px;
+    }
+  }
+}
